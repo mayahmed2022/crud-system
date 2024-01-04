@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="w-75 bg-info mx-auto p-3">
+        <h1 class="text-center">CRUD SYSTEM</h1>
+        <div>
+            <label for="productNameInput"> Product Name :</label>
+            <input oninput="validtionName()" id="productNameInput" class="form-control" type="text">
+            <div id="hintMessage" class="alert alert-danger d-none">the product name shoud contain at least 3 character to 12 character </div>
+        </div>
+
+        <div>
+            <label for="productPriceInput"> Product Price :</label>
+            <input  oninput="validtionPrice()" id="productPriceInput" class="form-control" type="number">
+        </div>
+
+        <div>
+            <label for="productCategoryInput"> Product Category :</label>
+            <input   oninput="validtionCategory()" id="productCategoryInput" class="form-control" type="text">
+        </div>
+
+        <div>
+            <label for="productDescriptionInput"> Product Description :</label>
+            <textarea oninput="validtionDescription()" id="productDescriptionInput" class="form-control" ></textarea>
+        </div>
+
+
+        <button id="addBtn" onclick="addProduct()" class="btn btn-primary w-100 mt-3"> add product</button>
+        <button id="updataBtn" onclick="updateProduct()" class="btn btn-primary w-100 mt-3 d-none"> update prodct</button>
+
+
+
+
+        <input id="searchInput" oninput="search()" type="search" class="form-control w-75 mx-auto mt-3 mb-3" placeholder="search by name....">
+
+
+
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+               
+
+            </tbody>
+
+        </table>
+
+
+
+
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
